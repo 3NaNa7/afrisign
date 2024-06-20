@@ -16,7 +16,6 @@ Afrisign is a mobile application designed to translate African sign languages in
 Contributions are welcome! If you want to contribute to Afrisign, please fork the repository and create a pull request. You can also open issues for bug reports or feature requests.
 
 ## ToDo
-- Finish setting up application UI
-- Create APIs to communicate with our trained models.
-- Integrate backend with frontend. 
-
+- Finalize the application UI design.
+- Develop APIs to interface with our trained machine learning models.
+- Integrate backend services with the frontend interface.
