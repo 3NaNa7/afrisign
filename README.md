@@ -8,8 +8,8 @@ Afrisign is a mobile application designed to translate African sign languages in
 ## Features
 - **Real-time Translation**: Converts sign language gestures captured by the camera into readable text.
 - **User Profiles**: Allows users to create profiles and customize settings.
-- **Choose Category**: Allows users to select a domain they may want to have a conversation. Currently supports Education and Religion.
-- **Chat**: An integrated chatbot for personalised conversations.
+- **Choose Category**: Users can select a domain for conversation. Currently supports Education and Religion.
+- **Chat**: An integrated chatbot for personalized conversations.
 
 
 ## Contributing
