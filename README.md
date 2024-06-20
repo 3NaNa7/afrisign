@@ -1,6 +1,6 @@
 # afrisign
 
-A new Flutter project.
+A mobile application that translates african sign languages to text. The project is in its initial phase.
 
 ## Getting Started
 
