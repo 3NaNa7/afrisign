@@ -1,7 +1,5 @@
 # Afrisign
-# Afrisign
 
-Afrisign is a mobile application designed to translate African sign languages into text, aimed at improving communication accessibility for users with hearing impairments. This project is currently in its initial development phase.
 Afrisign is a mobile application designed to translate African sign languages into text, aimed at improving communication accessibility for users with hearing impairments. This project is currently in its initial development phase.
 
 ## UI on Figma
