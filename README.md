@@ -3,7 +3,7 @@
 Afrisign is a mobile application designed to translate African sign languages into text. This project is currently in its initial development phase.
 
 ## UI on Figma
-- [Afrisign UI](https://www.figma.com/design/w1ryToZydLGtR72JpKlKrT/Deaf-Assistant?node-id=0-1&t=513RXfItUenXxl41-1)
+- [Afrisign UI](https://www.figma.com/design/x1LaLf89w1IJiIZ24coJJr/AfriSign?node-id=3-447&t=ak2AHgrMOSPqwIqf-1)
 
 ## Features
 - **Real-time Translation**: Converts sign language gestures captured by the camera into readable text.
