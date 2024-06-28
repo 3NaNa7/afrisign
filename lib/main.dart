@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:afrisign/onboarding/screens/auth_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Afrisign',
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
@@ -20,14 +22,13 @@ class MyApp extends StatelessWidget {
             titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             titleMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
           )),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+  const MyHomePage();
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
