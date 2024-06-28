@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import '../screens/register_screen.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
@@ -53,7 +51,8 @@ class AuthScreen extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(111, 214, 149, 1)),
-                    onPressed: () {},
+                    onPressed: () => Navigator.of(context)
+                        .pushNamed(RegisterScreen.routeName),
                     child: Text('Sign Up Now!',
                         style: Theme.of(context)
                             .textTheme
