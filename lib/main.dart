@@ -1,7 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors
 
-import 'package:afrisign/onboarding/screens/auth_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:afrisign/onboarding/screens/auth_screen.dart';
+import 'package:afrisign/onboarding/screens/register_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
             titleMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
           )),
       home: const MyHomePage(),
+      routes: {RegisterScreen.routeName: (_) => RegisterScreen()},
     );
   }
 }
