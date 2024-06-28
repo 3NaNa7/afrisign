@@ -1,4 +1,3 @@
-
 import 'package:afrisign/onboarding/screens/auth_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,11 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+          textTheme: const TextTheme(
+            titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            titleMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+          )),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -31,8 +34,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return const AuthScreen();
