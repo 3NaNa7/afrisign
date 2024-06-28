@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
           textTheme: const TextTheme(
             titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             titleMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+            displayLarge: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            displayMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
           )),
       home: const MyHomePage(),
       routes: {RegisterScreen.routeName: (_) => RegisterScreen()},
