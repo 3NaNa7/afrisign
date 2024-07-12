@@ -15,7 +15,7 @@ class ExploreHomeScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10.0),
+                padding: const EdgeInsets.only(top: 10.0, bottom: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -24,6 +24,28 @@ class ExploreHomeScreen extends StatelessWidget {
                     Image.asset('assets/images/male_pic.png',
                         width: 50, height: 50)
                   ],
+                ),
+              ),
+              Card(
+                elevation: 3,
+                surfaceTintColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.grey, width: 0.5),
+                    borderRadius: BorderRadius.circular(10)),
+                child: ListTile(
+                  leading: ClipOval(
+                    child: Image.asset(
+                      'assets/images/doctor_profile_img.jpeg',
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  title: Text(
+                    'Doctor Kate',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  subtitle: Text('Hello [Chris]! How are you doing today?'),
                 ),
               )
             ],
