@@ -90,7 +90,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Text('or'),
                     ElevatedButton.icon(
                       icon: Image.asset('assets/images/google_logo.png',
-                          height: 24), // Replace with your Google logo asset
+                          height: 24),
                       label: Text('Continue with Google',
                           style: Theme.of(context)
                               .textTheme
