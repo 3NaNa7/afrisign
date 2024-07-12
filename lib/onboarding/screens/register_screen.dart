@@ -3,8 +3,16 @@
 import 'package:flutter/material.dart';
 import '../widgets/custom_textformfield.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   static const routeName = 'register-screen';
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  bool? value = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,114 +21,90 @@ class RegisterScreen extends StatelessWidget {
           backgroundColor: Color.fromRGBO(245, 242, 242, 1),
           title: Text("Registration"),
         ),
-        body: Container(
-          width: double.infinity,
-          margin: EdgeInsets.only(left: 12, right: 12, top: 30, bottom: 10),
+        body: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(bottom: 20),
-                child: Text(
-                  "Let's Get You Started",
-                  style: Theme.of(context).textTheme.displayLarge,
-                ),
-              ),
-              Form(
-                  child: SingleChildScrollView(
+                width: double.infinity,
+                margin:
+                    EdgeInsets.only(left: 12, right: 12, top: 30, bottom: 10),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomTextFormField(label: 'First Name'),
-                    CustomTextFormField(label: 'Last Name'),
-                    CustomTextFormField(label: 'Username'),
-                    CustomTextFormField(label: 'Password'),
-                    CustomTextFormField(label: 'Confirm Password'),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 40),
+                      child: Text(
+                        "Let's Get You Started",
+                        style: Theme.of(context).textTheme.displayLarge,
+                      ),
+                    ),
+                    Form(
+                        child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          CustomTextFormField(label: 'First Name'),
+                          CustomTextFormField(label: 'Last Name'),
+                          CustomTextFormField(label: 'Username'),
+                          CustomTextFormField(
+                            label: 'Password',
+                            obscureText: true,
+                          ),
+                          CustomTextFormField(
+                            label: 'Confirm Password',
+                            obscureText: true,
+                          ),
+                          Row(
+                            children: [
+                              Checkbox(
+                                  value: value,
+                                  onChanged: (val) {
+                                    setState(() {
+                                      value = val;
+                                    });
+                                  }),
+                              Text('Remember me')
+                            ],
+                          ),
+                        ],
+                      ),
+                    ))
                   ],
                 ),
-              ))
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromRGBO(111, 214, 149, 1)),
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(RegisterScreen.routeName),
+                      child: Text('Register Now',
+                          style: Theme.of(context)
+                              .textTheme
+                              .displayMedium!
+                              .copyWith(color: Colors.white)),
+                    ),
+                    Text('or'),
+                    ElevatedButton.icon(
+                      icon: Image.asset('assets/images/google_logo.png',
+                          height: 24), // Replace with your Google logo asset
+                      label: Text('Continue with Google',
+                          style: Theme.of(context)
+                              .textTheme
+                              .displayMedium!
+                              .copyWith(color: Colors.black)),
+                      onPressed: () {
+                        // Handle Google sign-in here
+                      },
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ));
-
-    /* Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Container(
-            color: Colors.grey[200],
-            padding: EdgeInsets.all(16.0),
-            child: Form(
-              child: Column(
-                children: [
-                  Text(
-                    "Let's Get You Started",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "First Name",
-                      filled: true,
-                      fillColor: Colors.white,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Last Name",
-                      filled: true,
-                      fillColor: Colors.white,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Username",
-                      filled: true,
-                      fillColor: Colors.white,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Password",
-                      filled: true,
-                      fillColor: Colors.white,
-                    ),
-                    obscureText: true,
-                  ),
-                  SizedBox(height: 8),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: "Confirm Password",
-                      filled: true,
-                      fillColor: Colors.white,
-                    ),
-                    obscureText: true,
-                  ),
-                  SizedBox(height: 8),
-                  Row(
-                    children: [
-                      Checkbox(
-                        value: false,
-                        onChanged: (value) {},
-                      ),
-                      Text("Remember me"),
-                    ],
-                  ),
-                  SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () {
-                      // TODO: Implement registration logic
-                      // You can send the input details to the backend here
-                    },
-                    child: Text("Register"),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        )); */
   }
 }
