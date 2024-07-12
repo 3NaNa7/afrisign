@@ -13,6 +13,7 @@ class ExploreHomeScreen extends StatelessWidget {
         body: Container(
           margin: EdgeInsets.only(left: 10, right: 10),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 50.0),
@@ -50,7 +51,34 @@ class ExploreHomeScreen extends StatelessWidget {
                     subtitle: Text('Hello [Chris]! How are you doing today?'),
                   ),
                 ),
-              )
+              ),
+              Spacer(),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Welcome [Chris] 👋',
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                  Text(
+                    'Explore our latest categories in health and educational fields.',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(111, 214, 149, 1)),
+                    onPressed: () => Navigator.of(context)
+                        .pushNamed(ExploreHomeScreen.routeName),
+                    child: Text('Explore',
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayLarge!
+                            .copyWith(color: Colors.white)),
+                  ),
+                ],
+              ),
+              Spacer(),
             ],
           ),
         ));
