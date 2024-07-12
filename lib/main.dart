@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:afrisign/onboarding/screens/auth_screen.dart';
 import 'package:afrisign/onboarding/screens/register_screen.dart';
+import 'package:afrisign/explore/screen/explore_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,10 @@ class MyApp extends StatelessWidget {
             displayMedium: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
           )),
       home: const MyHomePage(),
-      routes: {RegisterScreen.routeName: (_) => RegisterScreen()},
+      routes: {
+        RegisterScreen.routeName: (_) => RegisterScreen(),
+        ExploreHomeScreen.routeName: (_) => ExploreHomeScreen()
+      },
     );
   }
 }
