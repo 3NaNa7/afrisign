@@ -1,8 +1,8 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
-class ExploreHome extends StatelessWidget {
+class ExploreHomeScreen extends StatelessWidget {
   static const routeName = 'explore-home';
   @override
   Widget build(BuildContext context) {

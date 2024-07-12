@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:afrisign/explore/screen/explore_home.dart';
 import '../widgets/custom_textformfield.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -80,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromRGBO(111, 214, 149, 1)),
                       onPressed: () => Navigator.of(context)
-                          .pushNamed(RegisterScreen.routeName),
+                          .pushNamed(ExploreHomeScreen.routeName),
                       child: Text('Register Now',
                           style: Theme.of(context)
                               .textTheme
