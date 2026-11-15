@@ -1,6 +1,6 @@
-# Afrisign
+# Afrisign UI
 
-Afrisign is a mobile application designed to translate African sign languages into text. This project is currently in its initial development phase.
+This is the UI for the Afrisign Research
 
 ## UI on Figma
 - [Afrisign UI](https://www.figma.com/design/x1LaLf89w1IJiIZ24coJJr/AfriSign?node-id=3-447&t=ak2AHgrMOSPqwIqf-1)
@@ -11,11 +11,5 @@ Afrisign is a mobile application designed to translate African sign languages in
 - **Choose Category**: Users can select a domain for conversation. Currently supports Education and Religion.
 - **Chat**: An integrated chatbot for personalized conversations.
 
-
-## Contributing
-Contributions are welcome! If you want to contribute to Afrisign, please fork the repository and create a pull request. You can also open issues for bug reports or feature requests.
-
 ## ToDo
 - Finalize the application UI design.
-- Develop APIs to interface with our trained machine learning models.
-- Integrate backend services with the frontend interface.
