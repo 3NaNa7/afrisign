@@ -12,4 +12,4 @@ This is the UI for the Afrisign Research
 - **Chat**: An integrated chatbot for personalized conversations.
 
 ## ToDo
-- Finalize the application UI design.
+- Develop the application UI design.
